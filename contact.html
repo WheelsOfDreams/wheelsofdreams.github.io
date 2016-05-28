@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Wheels Of Dreams Project - Contact</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/main.css"></link>
+        <script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="contact secondary wrapper">
+            <div class="header yui3-g">
+                <div class="yui3-u-1-3 logo"><img src="images/wheels-of-dreams-logo.png"></div>
+                <div class="yui3-u-2-3 nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="donate.html">Donate!</a></li>
+                        <li><a href="thebuild.html">The Build</a></li>
+                        <!--<li><a href="gallery.html">Gallery</a></li>-->
+                        <li><a href="about.html">About</a></li>
+                        <li><a class="active" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlights clear-bg yui3-g">
+                <div class="yui3-u-2-3">
+                    <div class="highlight contact-form">
+                        <h2 style="margin-left: 230px; margin-top: 50px">Contact Form</h2>
+                        <form id="contact-form">
+                            <label for="senderName">Name:</label>
+                            <input type="text" name="name" id="senderName"/>
+                            <label for="senderPhone">Phone:</label>
+                            <input type="text" name="phone" id="senderPhone"/>
+                            <label for="senderEmail">Email:</label>
+                            <input type="text" name="email" id="senderEmail"/>
+                            <label for="senderMsg">Message:</label>
+                            <textarea name="message" id="senderMsg"></textarea>
+                            <input type="hidden" name="flag" value="74519384" />
+                            <button type="submit" class="primary-link">Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="yui3-u-1-3">
+                    <div class="highlight blue">
+                        <h2>Phone</h2>
+                        <ul>
+                            <li>
+                                <span>Dave Pihach<br>Project Manager</span>
+                                <p>Industrial Machine & Mfg.<br> Local: 306-242-8400</p>
+                            </li>
+                            <li>
+                                <span>Lisa Sands<br>Childrens Hospital Foundation</span>
+                                <p>Local: 306-931-4887<br>Toll free: 888-808-kids (5437) </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer yui3-g">
+                <div class="yui3-u-3-4">
+                    <ul>
+                        <li><a class="active" href="/">Home</a></li>
+                        <li><a href="donate.html">Donate!</a></li>
+                        <li><a href="thebuild.html">The Build</a></li>
+                        <!--<li><a href="gallery.html">Gallery</a></li>-->
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="yui3-u-1-4 copyright">
+                    &copy; Wheels Of Dreams 2013
+                </div>
+            </div>
+        </div>
+<script>
+YUI().use('node', 'event', 'io', 'io-form', function(Y) {
+    Y.one('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        // Y.io('/contact.php', {
+        //     method: 'POST',
+        //     form: {
+        //         id: Y.one('#contact-form')
+        //     },
+        //     on: {
+        //         success: function() {
+        //             alert('Thank you for contacting the Wheels Of Dreams project, someone will be in touch with you shortly!');
+        //         },
+        //         failure: function() {
+                    alert('Sorry there was an error submitting your message please call us at 306-242-8400 - we would love to hear from you!');
+            //     }
+            // }
+        // });
+    });
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38157657-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
+</html>

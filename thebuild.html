@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Wheels Of Dreams Project - Follow The Build</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="http://yui.yahooapis.com/3.9.1/build/yui/yui-min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="thebuild secondary wrapper">
+            <div class="header yui3-g">
+                <div class="yui3-u-1-3 logo"><img src="images/wheels-of-dreams-logo.png"></div>
+                <div class="yui3-u-2-3 nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="donate.html">Donate!</a></li>
+                        <li><a class="active" href="thebuild.html">The Build</a></li>
+                        <!--<li><a href="gallery.html">Gallery</a></li>-->
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlights clear-bg yui3-g">
+                <div class="yui3-u-1">
+                    <div class="highlight blue">
+                        <h2 style="margin-left: 220px;">Follow The Build</h2>
+                        <div class="carousel-container"></div>
+                        <div class="how-to">
+                            <p class="how-to" style="margin-left: 200px;">How to use the carousels:</p>
+                            <ol class="how-to" style="margin-left: 190px;">
+                                <li>Click on one of the photos below to view that carousel.</li>
+                                <li>Once the carousel loads, click the left and right sides
+                                of the photo to view the previous and next photos.</li>
+                                <li>Hover over the description to view more (if available).</li>
+                            </ol>
+                        </div>
+                        <div class="gallery-container"></div>
+                        <div class="not-working">
+                            <p>Unable to view the photo carousels? <a href="http://www.flickr.com/photos/90566493@N04/sets/">Click here to view them on Flickr</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer yui3-g">
+                <div class="yui3-u-3-4">
+                    <ul>
+                        <li><a class="active" href="/">Home</a></li>
+                        <li><a href="donate.html">Donate!</a></li>
+                        <li><a href="thebuild.html">The Build</a></li>
+                        <!--<li><a href="gallery.html">Gallery</a></li>-->
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="yui3-u-1-4 copyright">
+                    &copy; Wheels Of Dreams 2013
+                </div>
+            </div>
+        </div>
+<script>
+YUI({
+    modules: {
+        'gallery-flickr-carousel': {
+            fullpath: 'js/gallery-flickr-carousel-min.js',
+            requires: ['scrollview', 'scrollview-paginator', 'base-build', 'jsonp', 'event-mouseenter']
+        },
+        'flickr-carousel-gallery': {
+            fullpath: 'js/flickr-carousel-gallery-min.js',
+            requires: ['gallery-flickr-carousel', 'base', 'base-build', 'jsonp', 'event']
+        }
+    }
+}).use('flickr-carousel-gallery', function(Y) {
+
+    new Y.FlickrCarouselGallery({
+        galleryNode: Y.one('.gallery-container'),
+        carouselNode: Y.one('.carousel-container'),
+        apiKey: 'b4faad78e86bf3d229b81288545420b3',
+        photosetIds: [
+            {id: '72157634468729378', title: 'Off To Powdercoating'},
+            {id: '72157634461468113', title: 'The Grill Insert'},
+            {id: '72157633760864601', title: 'Wheels of Dreams'},
+            {id: '72157633711543388', title: 'The Exhaust'},
+            {id: '72157633375447086', title: 'The Motor Goes In!'},
+            {id: '72157633297265189', title: 'It\'s Time For A Car Show'},
+            {id: '72157632629869486', title: 'F100 Fender Makeover'},
+            {id: '72157632625816255', title: 'F100 Hood Makeover'},
+            {id: '72157632625701219', title: "It's Starting To Look Like A Shelby"},
+            {id: '72157632790336821', title: 'Details, Details'},
+            {id: '72157632964979919', title: 'The Chassis'},
+            {id: '72157633018697318', title: 'Building a F100 Truck Box Shelby Style'}
+        ],
+        carouselConfig: {
+            showDescription: true,
+            autoAdvance: false,
+            startDelay: 5000,
+            advanceDelay: 5000,
+            width: '500px'
+        },
+    });
+
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38157657-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
+</html>
+
